@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The a11y cats: learn web accessibility from cats</title>
+    <style>
+        body {
+        font-family: Georgia;
+        font-size: 150%;
+        margin: 0;
+        padding: 0;
+        }
+        img {
+          max-width: 35%;
+        }
+        h1 {
+        font-size: 175%;
+        }
+        h2 {
+        font-weight: normal;
+        }
+        p {
+        line-height: 1.5;
+        }
+        a:not([href^="https"]) {
+        display: block;
+        background-color: #efefef;
+        color: #333;
+        padding: 1em;
+        text-align: center;
+        text-decoration: none;
+        }
+        section {
+        height: 100vh;
+        display: flex;
+        padding: 1em;
+        }
+        section.quiz {
+          background-color: antiquewhite;
+        }
+        section.quiz fieldset {
+          background-color: white;
+        }
+        .group p + p {
+        margin-top: 2rem;
+        }
+        input[type="radio"]:focus + label {
+          outline: 2px solid blue;
+          outline-offset: -2px;
+        }
+    </style>
+</head>
+<body>
+    <section id="beginning">
+        <div class="group">
+          <h1>The a11y cats</h1>
+          <h2>Learn web accessibility from cats.</h2>
+          <p>by Robert Mion</p>
+          <a href="#toc">Let's dive in!</a>
+        </div>
+      </section>
+      <section id="toc">
+        <div class="group">
+          <h2>A sneak peak: say them with me!</h2>
+          <ol>
+            <li>Purr-see-vuh-bull</li>
+            <li>Aww-purr-uh-bull</li>
+            <li>Un-derr-stand-uh-bull</li>
+            <li>Row-bussed</li>
+          </ol>
+          <a href="#part1">Turn the page</a>
+        </div>
+      </section>
+      <section id="part1">
+        <div class="group">
+          <h2>Part 1: Purr-see-vuh-bull</h2>
+          <p>Some of us see. Some hear. Some touch. These are called lenses!</p>
+          <p>The world wide web works wonders when it's tuned for our senses.</p>
+          <a href="#chp1">Turn the page</a>
+        </div>
+      </section>
+      <section id="chp1">
+        <div class="group">
+          <h2>Chapter 1:<br /> Color Me Confused</h2>
+          <p><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#use-of-color">1.4.1: Use of Color - Level A</a></p>
+          <a href="#g1">Turn the page</a>
+        </div>
+      </section>
+      <section id="g1">
+        <div class="group">
+          <p>Gayle and Fred this past summer had twins.</p>
+          <p>Their boys - Red and Green - are cute, sheen and thin.</p>
+          <p>But when they're together, it's a bit rough for Fred.</p>
+          <p>Turns out Fred has trouble telling his Green from his Red.</p>
+          <a href="#quiz1">Turn the page</a>
+        </div>
+      </section>
+      <section class="quiz" id="quiz1">
+        <div class="group">
+          <h3>Here's what Fred sees</h3>
+          <form action="">
+            <fieldset>
+              <legend>Which one is Green?</legend>
+              <input type="radio" name="color-cat" data-cat="green" id="gray1" />
+              <label for="gray1"><img src="cat.jpg" alt="Cat"></label>
+              <input type="radio" name="color-cat" data-cat="red" id="gray2" />
+              <label for="gray2"><img src="cat.jpg" alt="Cat"></label>
+              <p class="answer">Answer will appear here</p>
+            </fieldset>
+          </form>
+          <a href="#g2">Turn the page</a>
+        </div>
+      </section>
+      <section id="g2">
+        <div class="group">
+          <p>Like any smart father, Fred thinks up something quick...</p>
+          <p>Each boy gets a shape. Yes, that's sure to stick!</p>
+          <p>Green's things get a circle. And Red's get a square.</p>
+          <p>It's a daunting task - for sure - but Fred doesn't care.</p>
+          <a href="#quiz2">Turn the page</a>
+        </div>
+      </section>
+      <section class="quiz" id="quiz2">
+        <div class="group">
+          <h3>Here's what Fred sees</h3>
+          <form action="">
+            <fieldset>
+              <legend>Which one is Green?</legend>
+              <input type="radio" name="shape-cat" data-cat="green" id="circle" />
+              <label for="circle"><img src="green-circle.jpg" alt="Cat with circle"></label>
+              <input type="radio" name="shape-cat" data-cat="red" id="square" />
+              <label for="square"><img src="red-square.jpg" alt="Cat with square"></label>
+              <p class="answer">Answer will appear here</p>
+            </fieldset>
+          </form>
+          <a href="#g3">Turn the page</a>
+        </div>
+      </section>
+      <section id="g3">
+        <div class="group">
+          <p>Next, Fred draws patterns on things the boys might claim 'Dibs'.</p>
+          <p>You know, like bottles, blankets...clothes and bibs.</p>
+          <p>Dots help Fred know what belongs with his Green.</p>
+          <p>Dashes on Red's clothes help Fred separate things.</p>
+          <a href="#quiz3">Turn the page</a>
+        </div>
+      </section>
+      <section class="quiz" id="quiz3">
+        <div class="group">
+          <h3>Here's what Fred sees</h3>
+          <form action="">
+            <fieldset>
+              <legend>Which one is Green?</legend>
+              <input type="radio" name="shape-cat" data-cat="green" id="dots" />
+              <label for="dots"><img src="green-circle-dots.jpg" alt="Cat with dots"></label>
+              <input type="radio" name="shape-cat" data-cat="red" id="dashes" />
+              <label for="dashes"><img src="red-square-dash.jpg" alt="Cat with dashes"></label>
+              <p class="answer">Answer will appear here</p>
+            </fieldset>
+          </form>
+          <a href="#g4">Turn the page</a>
+        </div>
+      </section>
+      <section id="g4">
+        <div class="group">
+          <p>Lastly - and this fix is just for good measure:</p>
+          <p>Fred writes each boy's name on their side of the dresser.</p>
+          <p>Color alone made life a real hassle for Fred.</p>
+          <p>Now Fred has no trouble telling his Green from his Red.</p>
+          <a href="#quiz4">Turn the page</a>
+        </div>
+      </section>
+      <section class="quiz" id="quiz4">
+        <div class="group">
+          <h3>Here's what Fred sees</h3>
+          <form action="">
+            <fieldset>
+              <legend>Which one is Green?</legend>
+              <input type="radio" name="shape-cat" data-cat="green" id="label-green" />
+              <label for="label-green"><img src="green-labeled.jpg" alt="Cat labeled Green"></label>
+              <input type="radio" name="shape-cat" data-cat="red" id="label-red" />
+              <label for="label-red"><img src="red-labeled.jpg" alt="Cat labeled Red"></label>
+              <p class="answer">Answer will appear here</p>
+            </fieldset>
+          </form>
+          <a href="#ch1summary">Turn the page</a>
+        </div>
+      </section>
+      <section id="ch1summary">
+        <div class="group">
+          <h3>And meow, time to review!</h3>
+          <p>We've only begun and already learned a lot.</p>
+          <p>Using color alone can tie some folks' head in a knot.</p>
+          <p>Add shapes and patterns and labels to the mix...</p>
+          <p>...so that folks of all kinds may shout proudly, "This clicks!"</p>
+          <a href="#chp2">Next chapter</a>
+        </div>
+      </section>
+      <section id="chp2">
+        <div class="group">
+          <h2>Chapter 2:<br /> Stuck On Mute</h2>
+          <p><a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#use-of-color">1.2.2: Captions - Level A</a></p>
+          <a href="#chp2g1">Turn the page</a>
+        </div>
+      </section>
+      <section id="chp2g1">
+        <div class="group">
+          <p>Cap'n spends most of his day watching movies.</p>
+          <p>He's an esports pro...studying. He learns watching newbies.</p>
+          <p>He studies the players, the announcers - the parts most people hear.</p>
+          <p>That's tough though, since Cap'n is deaf in both ears.</p>
+          <a href="#tobecontinued">Turn the page</a>
+        </div>
+      </section>
+      <section id="tobecontinued">
+        <div class="group">
+          <h3>That's it...for now</h3>
+          <p>Are you a web accessibility expert? Fancy that!</p>
+          <p>Help me teach others to build websites...with cats!</p>
+          <a href="mailto:mr.robert.mion@gmail.com">Email the author</a>
+        </div>
+      </section>
+
+      <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          Array.from(document.forms).forEach(function(form) {
+            form.elements[0].onchange = function(event) { 
+              if (event.target.dataset.cat === "green") {
+                event.target.parentElement.lastElementChild.innerText = "That's right!";
+              } else {
+                event.target.parentElement.lastElementChild.innerText = "Not quite.";
+              }
+            }
+          })
+        })
+      </script>
+</body>
+</html>
